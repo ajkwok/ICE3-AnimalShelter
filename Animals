@@ -1,0 +1,38 @@
+public class Animals
+   private String name;
+   private double cost;
+   privat String price;
+   private String[][] animals = new String[3][10]; 
+   
+   public Animals()
+   {
+      cost = 0.0;
+      price = "$ " + cost;
+   }
+   public void setName(String name, int counter)
+   {
+      animals[0][counter] = name;
+   }
+   public void setType(String species, int counter)
+   {
+      animals[1][counter] = species;
+   }
+   public void setCost(double cost, int counter)
+   {
+      this.cost = cost;
+      price = "$ " + cost;
+      animals[2][counter] = price;
+   }
+   public static void displayAnimals()
+   {
+      for (int i = 0; i < 10; i++)
+      {
+         System.out.println(animals[0][i] + " is a(n) " + animals[1][i] + " and costs " + animals[3][i] + ".");
+      }
+   }
+   public static void displaySpecificAnimal(int counter)
+   {
+      System.out.println(animals[0][counter] + " is a(n) " + animals[1][counter]
+                        + " and costs " + animals[3][counter] + ".");
+   }
+}
