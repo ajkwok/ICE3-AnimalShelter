@@ -1,28 +1,39 @@
 public class Animals
+
+// fields
    private String name;
    private double cost;
    privat String price;
    private String[][] animals = new String[3][10]; 
    
+//constructor-no args
    public Animals()
    {
       cost = 0.0;
       price = "$ " + cost;
    }
+   
+//method to set name; use loop to set all ten names
    public void setName(String name, int counter)
    {
       animals[0][counter] = name;
    }
+   
+//method to set animal species; use loop to set; include user validation to limit types;
    public void setType(String species, int counter)
    {
       animals[1][counter] = species;
    }
+   
+//method to set cost; use loop to set
    public void setCost(double cost, int counter)
    {
       this.cost = cost;
       price = "$ " + cost;
       animals[2][counter] = price;
    }
+   
+//method to display animals, types, and cost
    public static void displayAnimals()
    {
       for (int i = 0; i < 10; i++)
@@ -30,9 +41,30 @@ public class Animals
          System.out.println(animals[0][i] + " is a(n) " + animals[1][i] + " and costs " + animals[3][i] + ".");
       }
    }
+   
+//method to display one animal at specific index; is it needed? might remove later
    public static void displaySpecificAnimal(int counter)
    {
       System.out.println(animals[0][counter] + " is a(n) " + animals[1][counter]
                         + " and costs " + animals[3][counter] + ".");
+   }
+   
+//method to check if there is a specific type of animal in the shelter and if so give names and cost
+   public static void checkSpecies(String species)
+   {
+      
+      for (int i = 0; i < 10; i++)
+      {
+         int speciesCounter = 0;
+         if (animals[1][i].equalsIgnoreCase(species))
+         {
+            System.out.println(animals[0][i] + " is a(n) " + animals[1][i] + " and costs " + animals[3][i] + ".");
+            speciesCounter++;
+         }
+         if (speciesCounter == 0)
+         {
+            System.out.println("Sorry, this shelter does not have any animals of that type.");
+         }
+      }
    }
 }
