@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+public class ShelterDriver
+{
+   private Animals animals;
+   private Customer customer;
+   private Volunteer volunteer;
+
+   
+   public static void main(String[] args)
+   {
+   
+//create objects
+      animals = new Animals();
+      volunteer = new Volunteer();
+      customer = new Customer();
+      
+//create scanner      
+      Scanner kb = new Scanner(System.in);
+      
+      boolean inUse = true;
+      int person;
+      while(inUse)
+      {
+         System.out.print("Are you a volunteer(1) or a customer(2)? ");
+         person = kb.nextInt();
+         while (newUser)
+         switch (person)
+         {
+            case (1) //volunteer
+            {
+               System.out.print("
+               break;
+            }
+            case (2) //customer
+            {
+               System.out.print("Is this your first time coming here?(y/n) ");
+               String newOrNot = kb.nextLine();
+               if (newOrNot.equalsIgnoreCase("y")
+               {
+                  boolean recognized = false;
+                  int customerName;
+                  System.out.print("Please enter your name: ");
+                  while (!recognized)
+                  {
+                     customerName = kb.nextLine();
+                     recognized = customer.checkName(customerName);
+                     if (!recognized)
+                     {
+                        System.out.print("I'm sorry, that name is not recognized, please try again.");
+                        customerName = kb.nextLine();
+                     }
+                  }
+                  System.out.print("Welcome back, " + name + ". What would you like to do?%n"
+                                   + "(1-browse, 2-search by type, 3-check history, 4-done)");
+                  int action = kb.nextInt();
+                  while(action != 4)
+                  {
+                     switch (action)
+                     {
+                        case (1)
+                        {
+                            System.out.println("These are the animals we currently have: ");
+                            Animals.displayAnimals();
+                            
+                            break;
+                        }
+                        case (2)
+                        {
+                           System.out.print("What kind of animal are you looking for? ");
+                           String species = kb.nextLine();
+                           Animals.checkSpecies(species);
+                           break;
+                        }
+                        case (3)
+                        {
+                           
+                           break;
+                        }
+                        default
+                        {
+                           System.out.print("What would you like to do?(1-browse, 2-search by type, 3-check history, 4-done) ");
+                           action = kb.nextInt();
+                        }
+                     }
+                  }
+               }
+               else if (newOrNot.equalsIgnoreCase("n")
+               {
+                  System.out.print("Welcome.  Please enter your name: ");
+                  
+               }
+               else
+               {
+                  System.out.println("Invalid input."); 
+               }
+               break;
+            }
+            default
+            {
+               System.out.print("That wasn't one of the options.  Please enter a (1) if you are a volunteer or a (2) "
+                                + "if you are a customer, then press enter.");
+               person = kb.nextInt();
+            }
+         }
+         
+      }
+   }
+}
