@@ -60,7 +60,7 @@ public class Animals
    }
    
 //method to check if there is a specific type of animal in the shelter and if so give names and cost
-   public static void checkSpecies(String species)
+   public static void searchBySpecies(String species)
    {
       
       for (int i = 0; i < 10; i++)
@@ -76,5 +76,9 @@ public class Animals
             System.out.println("Sorry, this shelter does not have any animals of that type.");
          }
       }
+   }
+   public static String checkSpecies(int index)
+   {
+      return animals[1][index];
    }
 }
