@@ -13,6 +13,16 @@ public class Animals
       price = "$ " + cost;
    }
    
+//constructor with args,
+   public Animals(String name, String type, double cost, int counter)
+   {
+      cost = 0.0;
+      price = "$ " + cost;
+      animals[0][counter] = name;
+      animals[1][counter] = type;
+      animals[3][counter] = price;
+   }
+   
 //method to set name; use loop to set all ten names
    public void setName(String name, int counter)
    {
