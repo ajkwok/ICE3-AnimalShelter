@@ -46,29 +46,35 @@ public class Animals
 //method to display animals, types, and cost
    public static void displayAnimals()
    {
-      for (int i = 0; i < 10; i++)
+      for (int index = 0; index < 10; index++)
       {
-         System.out.println(animals[0][i] + " is a(n) " + animals[1][i] + " and costs " + animals[3][i] + ".");
+         if (animals[0][index].equals(""))
+         {
+            System.out.println("There is no animal at this index.");
+         }
+         else
+            System.out.println(animals[0][index] + " is a(n) " + animals[1][index] + " and costs " + animals[2][index] + ".");
       }
    }
    
 //method to display one animal at specific index; is it needed? might remove later
-   public static void displaySpecificAnimal(int counter)
+   public static void displaySpecificAnimal(int index)
    {
-      System.out.println(animals[0][counter] + " is a(n) " + animals[1][counter]
-                        + " and costs " + animals[3][counter] + ".");
+      System.out.println(animals[0][index] + " is a(n) " + animals[1][index]
+                        + " and costs " + animals[2][index] + ".");
    }
    
 //method to check if there is a specific type of animal in the shelter and if so give names and cost
    public static void searchBySpecies(String species)
    {
       
-      for (int i = 0; i < 10; i++)
+      for (int index = 0; index < 10; index++)
       {
          int speciesCounter = 0;
          if (animals[1][i].equalsIgnoreCase(species))
          {
-            System.out.println(animals[0][i] + " is a(n) " + animals[1][i] + " and costs " + animals[3][i] + ".");
+            System.out.println((index + 1) + ". " + animals[0][index] + " is a(n) " + animals[1][index] + " and costs " 
+                               + animals[2][index] + ".");
             speciesCounter++;
          }
          if (speciesCounter == 0)
