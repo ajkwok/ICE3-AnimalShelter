@@ -16,7 +16,7 @@ public class Animals
 //constructor with args,
    public Animals(String name, String type, double cost, int index)
    {
-      cost = 0.0;
+      this.cost = cost;
       price = "$ " + cost;
       animals[0][index] = name;
       animals[1][index] = type;
