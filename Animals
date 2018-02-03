@@ -14,33 +14,33 @@ public class Animals
    }
    
 //constructor with args,
-   public Animals(String name, String type, double cost, int counter)
+   public Animals(String name, String type, double cost, int index)
    {
       cost = 0.0;
       price = "$ " + cost;
-      animals[0][counter] = name;
-      animals[1][counter] = type;
-      animals[2][counter] = price;
+      animals[0][index] = name;
+      animals[1][index] = type;
+      animals[2][index] = price;
    }
    
 //method to set name; use loop to set all ten names
-   public void setName(String name, int counter)
+   public void setName(String name, int index)
    {
-      animals[0][counter] = name;
+      animals[0][index] = name;
    }
    
 //method to set animal species; use loop to set; include user validation to limit types;
-   public void setType(String species, int counter)
+   public void setType(String species, int index)
    {
-      animals[1][counter] = species;
+      animals[1][index] = species;
    }
    
 //method to set cost; use loop to set
-   public void setCost(double cost, int counter)
+   public void setCost(double cost, int index)
    {
       this.cost = cost;
       price = "$ " + cost;
-      animals[2][counter] = price;
+      animals[2][index] = price;
    }
    
 //method to display animals, types, and cost
