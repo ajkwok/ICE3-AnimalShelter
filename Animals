@@ -20,7 +20,7 @@ public class Animals
       price = "$ " + cost;
       animals[0][counter] = name;
       animals[1][counter] = type;
-      animals[3][counter] = price;
+      animals[2][counter] = price;
    }
    
 //method to set name; use loop to set all ten names
